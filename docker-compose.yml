@@ -1,0 +1,11 @@
+version: '3'
+services:
+  python_server:
+    build:
+        context: .
+        dockerfile: ./provisioning/Dockerfile
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./src:/usr/src/app
+    tty: true
